@@ -50,8 +50,10 @@ void PlayFizzBuzz()
 
     int length = Convert.ToInt32(Console.ReadLine());
     int i = 1;
+    int lifes = 3;
     do
     {
+        if (lifes == 0) return;
         if (i % 3 == 0 && i % 5 == 0)
         {
             Thread.Sleep(1000);
@@ -63,6 +65,13 @@ void PlayFizzBuzz()
             {
                 Console.WriteLine("Correct");
                 Thread.Sleep(500);
+            }
+            else
+            {
+                Console.WriteLine("Incorrect");
+                lifes--;
+                Console.WriteLine(lifes + " lifes left");
+                Thread.Sleep(250);
             }
         }
         if (i % 5 == 0)
@@ -77,6 +86,13 @@ void PlayFizzBuzz()
                 Console.WriteLine("Correct");
                 Thread.Sleep(500);
             }
+            else
+            {
+                Console.WriteLine("Incorrect");
+                lifes--;
+                Console.WriteLine(lifes + " lifes left");
+                Thread.Sleep(250);
+            }
         }
         if (i % 3 == 0)
         {
@@ -89,6 +105,13 @@ void PlayFizzBuzz()
             {
                 Console.WriteLine("Correct");
                 Thread.Sleep(500);
+            }
+            else
+            {
+                Console.WriteLine("Incorrect");
+                lifes--;
+                Console.WriteLine(lifes + " lifes left");
+                Thread.Sleep(250);
             }
         }
         Console.WriteLine(i);
